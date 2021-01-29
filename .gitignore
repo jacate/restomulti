@@ -1,3 +1,4 @@
+.devops
 assets/*
 !assets/.gitignore
 protected/runtime/*

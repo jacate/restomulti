@@ -142,10 +142,10 @@ return array(
 
 		'db' => array(
 			'class'            => 'CDbConnection',
-			'connectionString' => 'mysql:host=localhost;dbname=kmrs',
+			'connectionString' => sprintf('mysql:host=%s;dbname=%s', $_ENV['DATABASE_HOST'], $_ENV['DATABASE_NAME']),
 			'emulatePrepare'   => true,
-			'username'         => 'root',
-			'password'         => '',
+			'username'         => $_ENV['DATABASE_USERNAME'],
+			'password'         => $_ENV['DATABASE_PASSWORD'],
 			'charset'          => 'utf8',
 			'tablePrefix'      => 'mt_',
 		),
